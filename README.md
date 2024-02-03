@@ -32,7 +32,7 @@ It should be noted that the salaries table has a one-to-one relationship with th
 We have two junction tables that facilitate many-to-many relationship with the employees-department. The two junction tables are used to:
 1.  List all employees in each department
 2.  List all managers for each department
-3.  
+   
 
 ## Data Analysis
 1. List the employee number, last name, first name, sex, and salary of each employee. 
