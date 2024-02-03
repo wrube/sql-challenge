@@ -23,7 +23,7 @@ The following locations contain the various parts of this assignment:
 - Snapshots of the 8 query outputs are located in `/EmployeeSQL/images/`
 
 ## Data Engineering
-The below diagram illustrates the conceptual idea on how to organise the employee records for Pewlett Hackard.
+The below Entity Relationship Diagram (ERD) illustrates one solution to organise the employee records for Pewlett Hackard. The ERD was created in pgAdmin4 and the creation file is `EmployeeSQL/ERD_employee.pgerd`.
 
 ![ERD employees](./EmployeeSQL/images/ERD_employee.png)
 
