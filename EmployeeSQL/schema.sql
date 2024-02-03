@@ -1,11 +1,12 @@
 
-
+-- Create a table for the position titles
 CREATE TABLE IF NOT EXISTS titles
 (
     title_id VARCHAR(5) NOT NULL PRIMARY KEY UNIQUE,
     title VARCHAR(30) NOT NULL
 );
 
+-- Create a table for all the employees
 CREATE TABLE IF NOT EXISTS employees
 (
     emp_no INTEGER NOT NULL PRIMARY KEY UNIQUE,
@@ -16,11 +17,11 @@ CREATE TABLE IF NOT EXISTS employees
     sex VARCHAR(1) NOT NULL,
     hire_date DATE NOT NULL,
 	
-	-- add a forign key constraint to the titles table
+	-- add a foreign key constraint to the titles table
 	CONSTRAINT fk_title FOREIGN KEY (emp_title_id) REFERENCES titles(title_id)
 );
 
-
+-- Create a table for salary information
 CREATE TABLE IF NOT EXISTS salaries
 (
 	--salary_id SERIAL NOT NULL  UNIQUE,
@@ -32,12 +33,14 @@ CREATE TABLE IF NOT EXISTS salaries
 
 );
 
+-- Create a table for the departments
 CREATE TABLE IF NOT EXISTS departments
 (
     dept_no VARCHAR(4) NOT NULL PRIMARY KEY UNIQUE,
     dept_name VARCHAR(30) NOT NULL
 );
 
+-- Create a junction table between the departments and employees tables for all employees
 CREATE TABLE IF NOT EXISTS departments_employee
 (
 	emp_no INTEGER NOT NULL,
@@ -47,6 +50,7 @@ CREATE TABLE IF NOT EXISTS departments_employee
 	PRIMARY KEY (emp_no, dept_no)	
 );
 
+-- Create a junction table between the departments and employees tables for managers
 CREATE TABLE IF NOT EXISTS departments_manager
 (
     dept_no VARCHAR(4) NOT NULL,
